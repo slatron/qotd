@@ -37,4 +37,10 @@ function getRandomItemNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-$('body > b').text(questions[getRandomItemNumber(0, questions.length - 1)]);
+function getQuestion() {
+  $('p > b').text(questions[getRandomItemNumber(0, questions.length - 1)]);
+}
+
+$('#refresh').on('click', getQuestion);
+
+(getQuestion())();
