@@ -1,4 +1,4 @@
-var questions = [
+const QUESTIONS = [
   "What did you eat for lunch?",
   "Did you catch anyone picking their nose?",
   "What games did you play at recess?",
@@ -31,16 +31,12 @@ var questions = [
   "Does anyone in your class have a hard time following the rules?"
 ];
 
-function getRandomItemNumber(min, max) {
+const getRandomItemNumber = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getQuestion() {
-  $('p > b').text(questions[getRandomItemNumber(0, questions.length - 1)]);
-}
+const getQuestion = () => document.getElementById('question').textContent = QUESTIONS[getRandomItemNumber(0, QUESTIONS.length - 1)];
 
-$('#refresh').on('click', getQuestion);
-
-(getQuestion())();
+getQuestion();

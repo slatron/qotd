@@ -1,19 +1,23 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <p>
-          <b style="font-size: 32px;"></b>
-        </p>
-        <button id="refresh" type="button" name="button">Refresh</button>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-        <script src="main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QOTD For Your Kids</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Get a random question to ask your child after school. This is to help encourage discussion between kids and parents." />
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css" rel="stylesheet">
+</head>
+<style>
+html {
+    font-size: 16px;
+}
+body {
+    padding: 1rem;
+}
+</style>
+<body>
+  <h1 id="question"></h1>
+  <button id="refresh" type="button" name="button" onclick="getQuestion()">Refresh</button>
+  <script src="main.js"></script>
+</body>
 </html>
